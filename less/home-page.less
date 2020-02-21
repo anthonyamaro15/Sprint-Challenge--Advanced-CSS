@@ -1,17 +1,21 @@
 // Home Content
 
 .home {
-
   .intro {
+    img {
+      border-radius: 6px;
+      @media @mobile {
+        height: 10vh;
+      }
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
@@ -19,11 +23,28 @@
     flex-wrap: wrap;
     width: 100%;
 
+    .sky {
+      @media @mobile {
+        display: none;
+      }
+    }
+
+    .launch {
+      @media @mobile {
+        display: none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @mobile {
+        width: 100%;
+        padding: 1rem;
+      }
     }
   }
 
@@ -44,10 +65,22 @@
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
+    margin-bottom: 4rem;
+
+    @media @mobile {
+      padding: 2rem;
+      margin: 2.5rem 0 2rem;
+    }
 
     .walk-text {
       width: 50%;
+
+      @media @mobile {
+        width: 100%;
+        margin-top: 2rem;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,13 +91,26 @@
       }
 
       .btn {
+        button {
+          .btnDesign(@ebony-clay, white, @ebony-clay);
+
+          @media @mobile {
+            width: 100%;
+            padding: 2rem 0;
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
+      @media @mobile {
+        width: 100%;
+        margin: 0 auto;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +118,4 @@
       }
     }
   }
-}// home
+} // home
